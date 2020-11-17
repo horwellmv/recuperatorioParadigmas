@@ -68,11 +68,13 @@ def mostrarLegajos(archivo1,archivo2, numeroLegajo):
                     monto = monto + int(gastos[1])
                     gastos = next(recursosCSv, None)
 
-            if monto <= 5000:
-                print(f'\tMonto de viaticos usados por {legajo[1]} {legajo[2]} es de {monto} ')
+                if monto <= 5000:
+                    print(f'\tMonto de viaticos usados por {legajo[1]} {legajo[2]} es de {monto} ')
 
-            else:
-                print(f"\tMonto de viaticos usados por {legajo[1]} {legajo[2]} es de {monto} y supero por {limite}")
+                else:
+                    print(f"\tMonto de viaticos usados por {legajo[1]} {legajo[2]} es de {monto} y supero por {limite}")
+
+                legajo = next(usuarioCSv, None)
 
 
 
